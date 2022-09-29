@@ -1,6 +1,6 @@
 {
-  "homepage": "https://worldzhao.github.io/react-easy-popup",
-  "repository": "https://github.com/worldzhao/react-easy-popup",
+  "homepage": "https://worldzhao.github.io/react-buttons",
+  "repository": "https://github.com/worldzhao/react-buttons",
   "version": "0.2.4",
   "license": "MIT",
   "main": "dist/index.js",
@@ -51,12 +51,12 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "react-easy-popup",
+  "name": "react-buttons",
   "authors": {
     "name": "worldzhao",
     "email": "1007326924@qq.com"
   },
-  "module": "dist/react-easy-popup.esm.js",
+  "module": "dist/react-buttons.esm.js",
   "devDependencies": {
     "@types/classnames": "^2.2.10",
     "@types/react": "^16.9.35",
