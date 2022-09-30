@@ -15,6 +15,7 @@ type ButtonType =
   | 'dark'
   | 'link';
 type ButtonSize = 'large' | 'small';
+type Shape = 'default' | 'circle' | 'round';
 
 /**
  * Button属性
@@ -53,6 +54,11 @@ interface ButtonProps {
    * 独立样式属性
    */
   style?: CSSProperties;
+  /**
+   * 形状
+   * */
+
+  shape?: Shape;
   children?: string;
 }
 
@@ -75,6 +81,7 @@ const Buttons: FC<ButtonProps> = props => {
     size,
     block = false,
     disabled = false,
+    shape = 'default',
     onClick,
     className = '',
     style,
@@ -83,6 +90,7 @@ const Buttons: FC<ButtonProps> = props => {
   const btnCls = outline ? `btn-outline-${type}` : `btn-${type}`;
   const sizeCls = !size ? '' : size === 'small' ? 'btn-sm' : 'btn-lg';
   const blockCls = block ? 'btn-block' : '';
+  const shapeCls = size ? `btn-shape-${shape}-${size}` : `btn-shape-${shape}`;
   const disabledCls = disabled ? 'btn-disable' : '';
   const obj: ButtonProperties = {};
   if (onClick) {
@@ -104,7 +112,7 @@ const Buttons: FC<ButtonProps> = props => {
   return (
     <button
       type="button"
-      className={`btn ${btnCls} ${sizeCls} ${blockCls} ${className} ${disabledCls}`}
+      className={`btn ${btnCls} ${sizeCls} ${blockCls} ${disabledCls} ${shapeCls} ${className} `}
       {...obj}
     >
       {children}

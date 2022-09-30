@@ -59,6 +59,17 @@ const App = () => {
       >
         disabled:true
       </Buttons>
+      <br />
+      <br />
+      <Buttons type="primary" shape="circle">
+        S
+      </Buttons>
+      <br />
+      <br />
+      <Buttons type="primary" shape="circle" size="large">
+        L
+      </Buttons>
+      <br />
     </div>
   );
 };
