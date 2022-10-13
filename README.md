@@ -8,3 +8,6 @@ cd example
 
 执行：
 npm start
+
+推送代码：
+git push -u orgin main
